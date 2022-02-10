@@ -18,4 +18,4 @@ jobs:
       run: docker build --tag nexius/docker-react --file Dockerfile.dev .
       
     - name: Run test
-      run: docker run nexius/docker-react npm run test -- --coverage
+      run: docker run -e CI=true nexius/docker-react npm run test -- --coverage
